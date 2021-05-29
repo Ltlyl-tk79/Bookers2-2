@@ -1,8 +1,11 @@
 <main>
+  <%= flash[:notice] %>
+  <%= flash[:update] %>
   <div class= "container px-5">
     <div class= "row">
       <div class= "col-md-3">
         <%= render "users/info", user: @user %>
+        <%= render "layouts/errors", obj: @booknew %>
         <%= render "users/form", book: @booknew %>
       </div>
       <div class= "col-md-8 offset-md-1">
